@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <!--head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title> Formular de contact </title>
+    </head>
+
+    <body>
+        <!--formular-->
+    <form>  
+        <!--header cu logo si bara de navigatie--> 
+        <header>
+            <a href="home.html"><img id="logo" src="pictures/im-high-resolution-logo-transparent.png" > </a>
+            <input id="menu-toggle" type="checkbox" >
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+    </label>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="portofolio.html">Portofolio</a>
+            </nav>
+        </header>
+
+    <h1> Formular de contact</h1>
+
+    <div id="contact">
+
+        <!-- chenarul de nume-->
+    <div class="form">
+    <label for="n1">Nume:</label>
+    <input type="text" name="nume" id="n1"  maxlength="20" size="25">
+    </div>
+        <!--chenarul de prenume-->
+    <div class="form">
+    <label for="n2">Prenume:</label> 
+    <input type="text" name="prenume" id="n2" maxlength="20" size="25">
+    </div>
+        <!--chenarul de email-->
+    <div class="form">
+    <label for="em">Email:</label>
+    <input type="text" name="email" id="em" maxlength="50" size="25">
+    </div>
+        <!--chenarul pentru telefon-->
+    <div class="form">
+    <label for="tel"> Nr. de telefon:</label>
+    <input type="text" name="telefon" id="tel" maxlength="20" size="25">
+    </div>
+
+    </div>
+    <br>
+        <!--chenar pentru mesaj suplimentar-->
+    Mesaj:
+    <textarea name="mesaj" rows="5" cols="100" wrap="soft"> </textarea>
+    <br>
+    <br>
+    <!--butonul de submit-->
+    <input type=submit name="tip" value="Trimite">
+    <br>
+    <br>   
+    </form>
+    <!--date de contact-->
+    <address>
+            <p><a id="mailto" href="mailto:ioana_teodora.misu@stud.acs.upb.ro?subject=Informare&body=Vreau%20sa%20aflu%20mai%20multe%20detalii"> ioana_teodora.misu@stud.acs.upb.ro </a></p>
+            <p> 0741234567</p>
+            <p> <em>Str. Pisicilor Nr.8 </em> </p>
+    </address>
+
+    <hr>
+    <!-- footer cu retelele de socializare-->
+    <footer>
+        <a href="https://www.facebook.com/"> <img class="social_media" src="pictures/Facebook_logo.png" width="25"> </a> 
+        <a href="https://twitter.com/home"> <img class="social_media" src="pictures/Twitter_new_X_logo.png" width="25"> </a> 
+        <a href="https://mail.google.com/mail/"> <img class="social_media" src="pictures/mail-icon.png" width="25"> </a>
+        <p> &copy; Ioana Mișu 2023 </p>
+        <a  href="doc.html" style="font-size:16px">Documentație</a>
+       
+    </footer>
+
+    </body>
+    
+
+</html>
+
+

@@ -1,0 +1,50 @@
+/* Reset some default styles */
+body, h1, p {
+    padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+    margin: 0 0 100px 0;
+   text-align: center;
+    background-color: #f4f4f4;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #333;
+}
+.doc {
+    text-align:left;
+}
+button {
+    margin: 5px;
+}
+
+/* Style the main content area */
+main {
+    padding: 20px 0; 
+}
+
+/* Style links within the main content */
+a {
+    color: #d534db;
+    text-decoration: none;
+    border-bottom: 1px dashed #3498db;
+}
+
+a:hover {
+    border-bottom: 1px solid #3498db;
+}
+
+/* Style the footer */
+footer {
+    background-color: cornflowerblue;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color:aliceblue;
+    text-decoration: none;
+}

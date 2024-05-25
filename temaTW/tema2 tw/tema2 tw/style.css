@@ -1,0 +1,328 @@
+body {
+    margin-top: 12%;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(135deg,#f9f2d3, rgb(154, 183, 255));
+    background-attachment: fixed;
+    background-size: contain;
+}
+h1 {
+    font-size: 3em;
+    text-decoration: underline dotted slateblue;
+}
+h2 {
+    text-decoration: underline dotted slateblue;
+    font-size: 2em;
+}
+
+
+
+
+#descriere {
+    text-align: justify;
+}
+#quote {
+    text-align: justify;
+}
+/*layout linkuri*/
+a:link {
+text-decoration:none;
+color:white;
+text-shadow: 2px 1px white;
+font-size: 24px;
+font-weight: bold;
+margin-right: 10px;
+}
+a:visited {
+    color:black;
+}
+a:hover {
+    color:tan;
+}
+a:active {
+    color:chartreuse;
+}
+
+/*bara de navigare*/
+nav {
+    
+width:95%;
+    display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > a {
+    margin: 0 1rem ;
+overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 50px;
+    margin-right: 10%;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+/*layout pentru mobile*/
+@media (max-width: 700px) {
+    body {
+        margin-top: 25%;
+    } 
+    
+        .menu-button-container {
+          display: flex;
+        }
+        nav {
+          position: absolute;
+          top: 0;
+          margin-top: 70px;
+          left: 0;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+        #menu-toggle ~ nav a {
+          height: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #menu-toggle:checked ~ nav a {
+          border: 3px solid black;
+          height: 2em;
+          padding: 0.5em;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        nav a:link {
+            font-size: 30px;
+            
+        }
+        nav > a {
+            
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0.5em 0;
+          width: 100%;
+          color: white;
+          background-color: cornflowerblue;
+          background: linear-gradient(to right, #f9f2d3, rgb(9, 78, 205));
+        }
+        nav > a:not(:last-child) {
+          border-bottom: 1px solid black;
+        }
+}
+
+  
+  /*editare poza profil*/
+#profile_picture {
+    float:right;
+    margin: 10px 30px 20px 20px;
+    width: 30%;
+    border: 2px solid rgb(74, 31, 31);
+}
+
+
+/*logo*/
+#logo {
+    width: 10%;
+    transition: 2s;
+}
+#logo:hover
+{
+    transform:translate(10px);
+}
+
+/*layout email*/
+#mailto {
+    text-shadow: 0px 0px black;
+    font-size:100%;
+    color:black;
+}
+
+/*layout pt elementele din formularul de contact*/
+#contact {
+    display:flex;
+    flex-wrap:wrap;        
+}
+.form {
+    margin-right: 20px;
+}
+
+
+header {
+    /*
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    background-color:beige; 
+    */
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: linear-gradient(to right, #f9f2d3, rgb(9, 78, 205));
+  
+  color: #FFF;
+  height: 50px;
+  padding: 1em; 
+}
+
+
+footer {
+    position:relative;
+    text-align:center;
+    width: 100%;
+    padding: 10px;
+
+}
+
+/*layout logo-uri retele de socializare*/
+.social_media{
+    transition: 2s;
+    width:30px;
+}
+.social_media:hover{
+    transform: rotate(30deg);
+}
+
+/* animatia cu pisica*/
+#animation {
+    position:absolute;
+    top:0px;
+    left:200px;
+    width:2%;
+    height:auto;
+    opacity:25%;
+    animation-name:move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    0% {transform: translate(0px);}
+    50%{transform: translate(100px);}
+    100% {transform: translate(200px);
+    transform: scaleX(-1);} 
+}
+
+/*proiectele din portofoliu asezate intr-un grid*/
+#proiect {
+    list-style-type: none;
+    display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10%; 
+        grid-gap: 5%;
+        grid-auto-rows: 200px;
+}
+a.proiect {
+    color:lightblue;
+    text-shadow: 0px 0px black;
+    font-size: 16px ;
+}
+a.proiect:hover {
+    color:tan;
+}
+li.proiect {
+    display: inline;
+    border: 1px solid black;
+    border-radius: 20%;
+    padding: 10px;
+    background-color: rgb(207,232,220);
+    text-align: center;
+}
+
+/*formatarea chenarelor link-urilor catre proiecte*/
+.link  {
+    padding: 10px;
+    margin: 10px 20px 0 20px;
+    border:1px solid skyblue;
+    border-radius:50%;
+    background-color: black;
+
+}
+.link:hover {
+    scale: 1.2;
+    transition: scale 2s;
+}
+
+/*referiri la proiecte folosind id-uri*/
+#patiserie
+{
+    
+    background-image: url(pictures/croissant.jpg);
+    background-size: cover;
+}
+#lanparty {
+    background-image: url(pictures/lanparty.jpg);
+    background-size: cover;
+}
+#masina {
+    background-image: url(pictures/car.jpg);
+    background-size: cover;
+}
+#web_page {
+    background-image: url(pictures/web.jpg);
+    background-size: cover;
+}
+
+
+
+  
+  
+
+

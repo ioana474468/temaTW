@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Documentație pentru Codul JavaScript de Manipulare Dog API</title>
+</head>
+<body class="doc">
+    <h1>Documentație</h1>
+    <h2>Introducere</h2>
+    <p>Acest document oferă o descriere detaliată a codului JavaScript 
+        care utilizează Dog API pentru a obține imagini aleatoare cu 
+        câini și efectuează diverse operațiuni de manipulare a acestora, 
+        cum ar fi oglindirea, ajustarea luminozității etc. Codul este 
+        structurat într-un mod modular și curat pentru a îmbunătăți 
+        citibilitatea și întreținerea.</p>
+    <h2>Funcția "getRandomDog"</h2>
+    <p>Această funcție asincronă utilizează Dog API pentru a obține o 
+        imagine de câine la întâmplare. Aceasta afișează imaginea într-un 
+        container HTML, într-un canvas și oferă link-ul imaginii.</p>
+        <ul>
+            <li>fetch('https://dog.ceo/api/breeds/image/random'): 
+                Realizează o cerere către Dog API pentru 
+                a obține o imagine aleatoare de câine.</li>
+                <li>"response.json()": Transformă răspunsul în format JSON.</li>
+                <li>"displayDogImage(data.message)": Afisează imaginea într-un element HTML.</li>
+                <li>"displayDogImageInCanvas(data.message)": Afisează imaginea într-un canvas.</li>
+                <li>"document.getElementById('link').innerHTML=data.message;": Afișează link-ul imaginii. </li>
+        </ul>
+
+    <h2>Funcțiile de Afisare a Imaginilor</h2>
+    <ol>
+        <li>"displayDogImage(imageUrl)"
+            <ul>
+                <li>Obține elementul HTML în care va fi afișată imaginea.</li>
+                <li>Creează un element imagine și setează sursa imaginii.</li>
+                <li>Afișează imaginea în container.</li>
+            </ul></li>
+        <li>"displayDogImageInCanvas(imageUrl)"
+            <ul>
+                <li>Creează o imagine, setează atributul crossOrigin 
+                    pentru manipularea imaginii, și așteaptă încărcarea acesteia.</li>
+                <li>După încărcare, ajustează dimensiunile canvas-ului 
+                    și desenează imaginea în canvas.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Event Listener pentru Oglindirea Imaginii</h2>
+    <ul>
+        <li>Listener pentru butonul "Optiunea 1" și "Optiunea 2".</li>
+        <li>Utilizează funcția "mirrorImage(imageData, k)" pentru a 
+            oglindi imaginea în canvas în patru etape, cu întârzieri 
+            de 1 secundă.</li>
+    </ul>
+
+    <h2>Funcția de Oglindire a Imaginii (mirrorImage)</h2>
+    <ul><li>"mirrorImage(imageData, k)": Oglidează imaginea pe orizontală
+         în patru etape, luând în considerare regiunile corespunzătoare 
+         ale canvas-ului.</li></ul>
+
+    <h2>Event Listener pentru Ajustarea Luminozității</h2>
+    <ul>
+        <li>Listener pentru butoanele "Mărește Luminozitatea" și "Scade
+             Luminozitatea".</li>
+        <li>Utilizează funcția "adjustBrightness(brightnessChange, k)" 
+            pentru a ajusta luminozitatea imaginii în patru etape, cu 
+            întârzieri de 1 secundă.</li>
+    </ul>
+
+    <h2>Funcția de Ajustare a Luminozității (adjustBrightness)</h2>
+    <ul>
+        <li>"adjustBrightness(brightnessChange, k)": Modifică luminozitatea
+             imaginii în patru etape, luând în considerare regiunile
+              corespunzătoare ale canvas-ului.</li>
+    </ul>
+    <h2>Concluzie</h2>
+    <p>Acest cod JavaScript demonstrează o integrare eficientă a Dog API pentru a 
+        obține imagini de câini și efectuarea de manipulări asupra acestora într-un mod
+         interactiv. Structura modulară și comentariile explicative facilitează înțelegerea
+          și extinderea codului în viitor.</p>
+    <footer>
+         <!--<p> &copy; Ioana Mișu 2023 </p> -->
+         <a  href="file.html" style="font-size:16px">Back</a>
+        
+     </footer>
+</body>
+</html>
